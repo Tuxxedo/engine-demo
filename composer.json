@@ -1,0 +1,22 @@
+{
+  "name": "tuxxedo/engine-demo",
+  "version": "0.1.0-dev",
+  "description": "Demo application for Tuxxedo Engine",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "homepage": "https://tuxxedo.app/",
+  "authors": [
+    {
+      "name": "Kalle Sommer Nielsen",
+      "email": "kalle@tuxxedo.app"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "tuxxedo/engine": "*"
+  },
+  "autoload": {
+    "classmap": [
+    ]
+  }
+}
