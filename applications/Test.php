@@ -8,6 +8,10 @@ class Test extends Application
 {
 	public function run() : void
 	{
-		echo 'Hello World', \PHP_EOL;
+		printf(
+			'Hello World (powered by Tuxxedo Engine %s)%s',
+			$this->di->need('version'),
+			\PHP_EOL,
+		);
 	}
 }
