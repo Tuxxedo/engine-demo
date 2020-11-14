@@ -10,4 +10,9 @@ class Index extends Controller
 	{
 		echo 'Hello World', \PHP_EOL;
 	}
+
+	public function displayNews(int $id) : void
+	{
+		printf('Displaying news article with id %d', $id);
+	}
 }
