@@ -5,9 +5,9 @@ namespace Applications\Test;
 use Applications\Test\Controllers\Index;
 use Tuxxedo\Application;
 use Tuxxedo\Di;
-use Tuxxedo\Dispatcher;
-use Tuxxedo\Router;
-use Tuxxedo\Router\Route;
+use Tuxxedo\Http\Dispatcher;
+use Tuxxedo\Http\Router;
+use Tuxxedo\Http\Route;
 
 class Test extends Application
 {
@@ -38,7 +38,7 @@ class Test extends Application
 	{
 		assert($this->di !== null);
 
-		$this->di->get(Dispatcher::class)->dispatch(
+		$this->di->get(Dispatcher::class)->handle(
 			$_SERVER['REQUEST_METHOD'],
 			$_SERVER['REQUEST_URI'],
 		);

@@ -2,8 +2,8 @@
 
 use Applications\Test\Test;
 use Tuxxedo\Di;
-use Tuxxedo\Dispatcher;
-use Tuxxedo\Router;
+use Tuxxedo\Http\Dispatcher;
+use Tuxxedo\Http\Router;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
@@ -17,7 +17,7 @@ $di->register(Dispatcher::class, static function(Di $di) : Dispatcher {
 	return new Dispatcher(
 		di: $di,
 		router: $di->need(Router::class),
-		errorHandler: static function() : void {
+		fallback: static function() : void {
 			echo 'Route not found';
 		},
 	);
